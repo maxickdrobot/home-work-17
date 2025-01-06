@@ -1,0 +1,15 @@
+@use "../../tools/variables" as *;
+@use "../../tools/mixins-media" as *;
+
+.header {
+    background-color: $primary-color;
+    color: $light-color;
+
+    @include md {
+        padding: 17px 5.33% 41px;
+    }
+
+    @include md-min {
+        padding: 35px 5.33% 83px;
+    }
+}

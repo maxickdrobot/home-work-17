@@ -1,0 +1,47 @@
+@use "../../tools/variables" as *;
+@use "../../tools/mixins-media" as *;
+@use "../../tools/mixins" as *;
+
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: $primary-color;
+    color: $light-color;
+    @include md {
+        padding: 31px 5.33%;
+    }
+
+    @include md-min {
+        padding: 51px 5.33% 49px;
+    }
+
+    a {
+        color: $light-color;
+        display: block;
+    }
+
+    &__container {
+        @include container($size: 1178px);
+
+        @include md-min {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        gap: $gap;
+        font-size: 1.125rem;
+        @include md {
+            justify-content: center;
+            margin-bottom: $gap;
+        }
+    }
+
+    &__copyright {
+        text-align: center;
+        font-size: $gap;
+    }
+}

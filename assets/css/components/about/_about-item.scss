@@ -1,0 +1,112 @@
+@use "../../tools/variables" as *;
+@use "../../tools/mixins-media" as *;
+
+.about-item {
+    &:first-child {
+        @include md {
+            margin-bottom: $gap-x3;
+        }
+
+        @include md-min {
+            margin-bottom: 74px;
+        }
+        .about-item__title {
+            @include md {
+                margin-bottom: $gap;
+            }
+
+            @include md-min {
+                margin-bottom: 16px;
+            }
+        }
+
+        .about-item__text {
+            @include md {
+                margin-bottom: $gap;
+            }
+
+            @include md-min {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    &:last-child {
+        flex-direction: row-reverse;
+
+        .about-item__title {
+            margin-bottom: 16px;
+        }
+
+        .about-item__text {
+            margin-bottom: 16px;
+
+            @include md-min {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    @include md-min {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2%;
+    }
+
+    &__picture {
+        position: relative;
+        width: 100%;
+
+        @include sm {
+            width: 100%;
+        }
+
+        @include md-sm {
+            width: 70%;
+        }
+        
+        @include md {
+            margin: 0 auto 30px;
+        }
+
+        @include md-min {
+            width: 50.85%;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+
+    &__content {
+        max-width: 470px;
+
+        @include md {
+            margin: 0 auto;
+        }
+
+        @include md-min {
+            width: 49%;
+        }
+    }
+
+    &__title {
+        font-family: $font-secondary;
+
+        @include md-sm {
+            font-size: 2rem;
+        }
+
+        @include md-min {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__text {
+        margin-bottom: $gap;
+        font-size: .9375rem;
+        color: rgba($black-color, 0.5);
+    }
+}

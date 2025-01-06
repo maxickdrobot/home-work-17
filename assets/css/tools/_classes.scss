@@ -1,0 +1,21 @@
+@use "variables" as *;
+
+.btn {
+    display: block;
+    font-size: 1.25rem;
+    line-height: 1.25em;
+    border-radius: 5px;
+    max-width: 170px;
+}
+
+.btn--light {
+    padding: 13px 47.5px 10px 48.5px;
+    color: $black-color;
+    background-color: $light-color;
+}
+
+.btn--dark {
+    padding: 13px 29.5px 10px;
+    color: $light-color;
+    background-color: $dark-color;
+}

@@ -1,0 +1,32 @@
+@use "../../tools/mixins-media" as *;
+@use "../../tools/mixins" as *;
+@use "../../tools/variables" as *;
+
+.partners-heading {
+    margin-bottom: 55px;
+    text-align: center;
+
+    &__label {
+        @include label;
+        margin-bottom: 16px;
+        color: $primary-color;
+    }
+
+    &__title {
+        margin-bottom: 16px;
+        font-family: $font-secondary;
+
+        @include sm-min {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__text {
+        font-size: 1.25rem;
+
+        span {
+            display: block;
+            margin-top: 9px;
+        }
+    }
+}

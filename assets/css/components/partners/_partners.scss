@@ -1,0 +1,26 @@
+@use "../../tools/mixins-media" as *;
+@use "../../tools/mixins" as *;
+@use "../../tools/variables" as *;
+
+.partners {
+    display: flex;
+    justify-content: center;
+
+    @include md {
+        margin-bottom: $gap-x3;
+        padding: 22px 5.33% 0;
+    }
+    
+    @include md-min {
+        margin-bottom: 73px;
+        padding: $gap-x3 5.33% 0;
+    }
+    
+    &__container {
+        @include container($size: 1160px);
+    }
+
+    &__btn {
+        margin: 0 auto;
+    }
+}
